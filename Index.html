@@ -1,10 +1,10 @@
 <html>
-    <body><script src="Questions.js"></script>
-    <script>
-        // HTML elements for each page, to be generte by JS
+    <body>
+
+        <!-- // HTML elements for each page, to be generte by JS
             // 1 - start page
                 // header
-                // h2
+                // Intro text
                 // start button
             // 2 - questions
                 // header
@@ -22,28 +22,37 @@
                 // p
                 // list
                 // button(s)
-        // JS functions
-            // 1 - start page
-                // on click
-                    // start timer
-                    // clear screen
-                    // load first question
-            // 2 - questions
-                // on click
-                    // display correct - wrong
-                    // calculate score
-                    // store score
-                    // load next question
-            // 3 - results
-                // in put initial
-                    // on click save initials & score, client side
-            // 4 - highscore
-                // on click
-                    // clear scores from client side
-                    // start again
 
-        // --------------------------------------------------------- //
 
-    </script>
+        // --------------------------------------------------------- // -->
+
+        <!-- start page -->
+        <div id="start-page">
+            <h1>Coding Quiz</h1>
+            <p>
+              Try your hand at my coding quiz, just hit start!
+            </p>
+            <button id="start">Start</button>
+        </div>
+    
+        <!-- questions page -->
+        <!-- hidden till called upon by JS (see Logic.JS) -->
+        <div id="questions" style="display:none">
+            <h2 id="question-title"></h2>
+            <div id="choices" class="choices"></div>
+        </div>    
+        <!-- results page, input initials -->
+        <!-- hidden until quiz questions are over and called upon by JS (see Logic.JS)-->
+        <div id="end-page" style="display:none">
+            <h2>All done!</h2>
+            <p>Your score is:<span id="final-score"></span>.</p>
+            <p>
+              Enter initials: <input type="text" id="initials" max="3" />
+              <button id="submit">Submit</button>
+            </p>
+        </div>
+
+        <script src="Questions.js"></script>
+        <script src="Logic.js"></script>
     </body>
 </html>
