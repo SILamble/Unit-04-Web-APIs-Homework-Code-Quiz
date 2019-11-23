@@ -34,3 +34,36 @@
             answer: "alerts"
         }
         ]
+
+        // overall page variables
+        var body = document.body;
+        //variabes for h1 & h2 headers, buttons
+        var h1El = document.createElement("h1");
+        var h2El = document.createElement("h2");
+        var bTn = document.createElement("button");
+        var answer = document.createElement("h3");
+        var lIst = document.createElement("li");
+        // 1 - start page
+            //text for start page
+        h1El.textContent = "Coding Quiz Challenge";
+        h2El.textContent = "Click start to try your hand at this coding quiz of mine";
+        bTn.innerText = "Start";
+            //add/append created text to body of page
+        body.appendChild(h1El);
+        body.appendChild(h2El);
+        body.appendChild(bTn);
+            //on click for pressing start button
+        bTn.addEventListener("click", function buildQuiz(){
+            //loop through question objects
+            for(var i=0;i<questions.length;i++){
+            //display question as the header
+            h1El.textContent = questions[i].title;
+            body.appendChild(h1El);
+            //clear previous h2 element
+            h2El.textContent = "";
+            body.appendChild(h2El);
+            //list possible answers
+            lIst.textContent = questions[i].choices;
+            body.appendChild(lIst);
+                
+        }});
