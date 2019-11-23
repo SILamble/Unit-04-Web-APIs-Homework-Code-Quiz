@@ -11,4 +11,6 @@ Final score stored locally by user initials
 
 The page is to be responsive to screen sizes
 
-
+Started by trying to create whole page via Javescript create elements. Changed to using a HTML page which would be dynamically altered by a sperate Javascript file.
+CSS styling to be completed to complete look and feel.
+JS Logic to be completed.
